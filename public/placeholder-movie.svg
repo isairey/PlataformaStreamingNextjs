@@ -1,0 +1,32 @@
+<svg width="400" height="600" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="600" fill="#1a1a1a"/>
+  <rect x="50" y="50" width="300" height="500" fill="#2a2a2a" rx="8"/>
+  
+  <!-- Film strip holes -->
+  <rect x="20" y="100" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="20" y="150" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="20" y="200" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="20" y="250" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="20" y="300" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="20" y="350" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="20" y="400" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="20" y="450" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="20" y="500" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  
+  <rect x="360" y="100" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="360" y="150" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="360" y="200" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="360" y="250" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="360" y="300" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="360" y="350" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="360" y="400" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="360" y="450" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  <rect x="360" y="500" width="20" height="15" rx="2" fill="#0a0a0a"/>
+  
+  <!-- Play icon -->
+  <circle cx="200" cy="300" r="40" fill="#ef4444" opacity="0.8"/>
+  <polygon points="185,285 185,315 215,300" fill="white"/>
+  
+  <!-- Text -->
+  <text x="200" y="450" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="16">No Image Available</text>
+</svg>
