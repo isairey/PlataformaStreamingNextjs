@@ -1,235 +1,454 @@
-# Screenly - Next.js Movie Streaming App
+<div align="center">
 
-A modern, full-stack movie streaming app (Netflix-like) built with Next.js App Router, TypeScript, Tailwind CSS, Prisma (SQLite), NextAuth, and TMDB API.
+<img width="220" src="https://cdn-icons-png.flaticon.com/512/2503/2503508.png" />
 
-## Features
+# 🎬 Screenly
 
-- 🎬 Real movie data from TMDB API
-- 🔐 Authentication (email/password) with NextAuth
-- 🎨 Modern Netflix-style UI with Tailwind CSS
-- 📱 Responsive design
-- 🔍 Movie search functionality
-- ❤️ Personal watchlist
-- 🎥 Video player with sample videos
-- 📊 Movie details, ratings, and trailers
-- 📧 Password reset via email
+### Plataforma de streaming moderna desarrollada con Next.js 🚀
 
-## Tech Stack
+<p align="center">
+  <b>Screenly</b> es una aplicación full-stack de streaming de películas inspirada en Netflix, construida con Next.js App Router, TypeScript, Tailwind CSS, Prisma y TMDB API para ofrecer una experiencia multimedia moderna y fluida.
+</p>
 
-- Next.js 14 (App Router)
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-Fullstack-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-Modern%20Web-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/TMDB-Movie%20API-01D277?style=for-the-badge">
+  <img src="https://img.shields.io/badge/TailwindCSS-UI-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white">
+</p>
+
+<p align="center">
+  <a href="#-acerca-del-proyecto">Acerca</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-tecnologías-utilizadas">Tecnologías</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-roadmap">Roadmap</a>
+</p>
+
+</div>
+
+---
+
+# 🌌 Acerca del proyecto
+
+**Screenly** es una plataforma multimedia moderna tipo Netflix desarrollada utilizando tecnologías full-stack modernas.
+
+La aplicación ofrece:
+
+- 🎬 Exploración de películas y series
+- 🔐 Sistema de autenticación
+- ❤️ Watchlist personalizada
+- 🔍 Buscador inteligente
+- 🎥 Reproductor multimedia
+- 📱 Responsive Design
+- 🌙 Interfaz cinematográfica moderna
+
+El proyecto fue desarrollado para practicar:
+
+- Next.js App Router
+- Full Stack Development
 - TypeScript
-- Tailwind CSS + Framer Motion
-- Prisma + SQLite
+- Prisma ORM
+- APIs externas
+- Arquitectura moderna web
+
+---
+
+# ✨ Características
+
+## 🎥 Plataforma multimedia
+
+- 🍿 Películas populares y trending
+- 🎞️ Información detallada
+- ⭐ Ratings y trailers
+- 🔥 Diseño tipo Netflix
+
+---
+
+## 🔐 Sistema de autenticación
+
+- 👤 Registro e inicio de sesión
+- 🔑 NextAuth Authentication
+- 📧 Recuperación de contraseña
+- 🔒 Protección de rutas privadas
+
+---
+
+## ❤️ Watchlist personalizada
+
+- 💾 Guardar películas favoritas
+- 📂 Biblioteca personalizada
+- ⚡ Gestión rápida
+- 🎬 Historial multimedia
+
+---
+
+## 🔍 Búsqueda avanzada
+
+- 🔎 Buscador inteligente
+- ⚡ Resultados rápidos
+- 🎯 Filtrado dinámico
+- 🎬 Exploración por título
+
+---
+
+## 📱 Responsive Design
+
+- 📲 Compatible con móviles
+- 💻 Optimizado para escritorio
+- 🖥️ Responsive Layout
+- 🌙 Dark UI moderna
+
+---
+
+# 🛠️ Tecnologías utilizadas
+
+## ⚡ Frontend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind,react" />
+</p>
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+---
+
+## 🗄️ Backend & Database
+
+<p>
+  <img src="https://skillicons.dev/icons?i=prisma,sqlite,nodejs" />
+</p>
+
+- Prisma ORM
+- SQLite
+- Node.js
+
+---
+
+## 🔐 Autenticación
+
 - NextAuth.js
+- JWT Sessions
+- Secure Authentication
+
+---
+
+## 🌐 APIs & Services
+
+<p>
+  <img src="https://skillicons.dev/icons?i=firebase" />
+</p>
+
 - TMDB API
-- Radix UI + Lucide React icons
-- SendGrid (Email service)
+- SendGrid
+- Email Services
 
-## Getting Started
+---
 
-### 1. Get TMDB API Key
-
-1. Go to [TMDB](https://www.themoviedb.org/) and create an account
-2. Go to Settings > API and request an API key
-3. Copy your API key
-
-### 2. Setup Environment
+# 📂 Estructura del proyecto
 
 ```bash
-# Copy environment file
-cp .env.example .env.local
-
-# Edit .env.local and add your configuration:
-TMDB_API_KEY="your-tmdb-api-key-here"
-TMDB_BASE_URL="https://api.themoviedb.org/3"
-
-# Database
-DATABASE_URL="file:./dev.db"
-
-# NextAuth.js
-NEXTAUTH_URL="http://localhost:3000"
-NEXTAUTH_SECRET="your-secret-key-here"
-
-# Email Configuration (Optional - for password reset)
-EMAIL_USER="your-gmail@gmail.com"
-EMAIL_PASS="your-16-digit-app-password"
-
-# SendGrid (Recommended for production)
-SENDGRID_API_KEY="SG.your-api-key-here"
-SENDGRID_FROM_EMAIL="noreply@yourdomain.com"
+screenly/
+│
+├── app/
+├── components/
+├── prisma/
+├── public/
+├── scripts/
+├── styles/
+├── lib/
+├── types/
+├── .env.local
+├── package.json
+└── README.md
 ```
 
-### 3. Install Dependencies
+---
+
+# ⚡ Instalación
+
+## 📋 Requisitos
+
+- Node.js
+- NPM
+- TMDB API Key
+
+---
+
+# 🔑 Obtener API Key de TMDB
+
+1️⃣ Crear cuenta en TMDB
+
+```txt
+https://www.themoviedb.org/
+```
+
+2️⃣ Ir a:
+
+```txt
+Settings → API
+```
+
+3️⃣ Generar API Key
+
+---
+
+# ⚙️ Configurar variables de entorno
+
+## Crear archivo:
+
+```bash
+.env.local
+```
+
+## Agregar configuración:
+
+```env
+TMDB_API_KEY="your-api-key"
+TMDB_BASE_URL="https://api.themoviedb.org/3"
+
+DATABASE_URL="file:./dev.db"
+
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-secret-key"
+
+EMAIL_USER="your-email@gmail.com"
+EMAIL_PASS="your-password"
+
+SENDGRID_API_KEY="SG.your-api-key"
+SENDGRID_FROM_EMAIL="noreply@domain.com"
+```
+
+---
+
+# 📦 Instalar dependencias
 
 ```bash
 npm install
 ```
 
-### 4. Setup Database
+---
+
+# 🗄️ Configurar base de datos
 
 ```bash
 npx prisma db push
 ```
 
-### 5. Run Development Server
+---
+
+# 🚀 Ejecutar proyecto
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Pages & Features
-
-- **Home** (`/`) - Featured movies, trending, and popular
-- **Movies** (`/movies`) - Browse popular, top-rated, and now playing
-- **Search** (`/search`) - Search movies by title
-- **Movie Detail** (`/movie/[id]`) - Movie details, trailer, and related movies
-- **Watch** (`/watch/[id]`) - Video player (requires login)
-- **Watchlist** (`/watchlist`) - Personal movie list (requires login)
-- **Auth** (`/auth/signin`, `/auth/signup`) - Authentication pages
-
-## Scripts
-
-- `npm run dev` — Start development server
-- `npm run build` — Build for production
-- `npm run start` — Start production server
-- `npm run db:push` — Push Prisma schema to database
-- `npm run db:studio` — Open Prisma Studio
-- `npm run fetch:movies` — Fetch movies from TMDB API
-- `npm run fetch:movies:test` — Test TMDB connection
-
-## Email Setup (Password Reset)
-
-### Option 1: Gmail SMTP (Development)
-
-1. Enable 2-Factor Authentication on your Google Account
-2. Generate App Password:
-   - Go to Google Account Settings > Security > App passwords
-   - Select "Mail" and "Other (custom name)"
-   - Enter "Screenly App" as name
-   - Copy the 16-digit password
-3. Add to `.env.local`:
-   ```bash
-   EMAIL_USER="your-gmail@gmail.com"
-   EMAIL_PASS="your-16-digit-app-password"
-   ```
-
-### Option 2: SendGrid (Production Recommended)
-
-1. Create account at [SendGrid.com](https://sendgrid.com/)
-2. Get API Key:
-   - Settings → API Keys → Create API Key
-   - Select "Restricted Access"
-   - Set Mail Send to "Full Access"
-3. Setup Domain Authentication (Recommended):
-   - Settings → Sender Authentication → Authenticate Your Domain
-   - Add DNS records to your domain
-4. Add to `.env.local`:
-   ```bash
-   SENDGRID_API_KEY="SG.your-api-key-here"
-   SENDGRID_FROM_EMAIL="noreply@yourdomain.com"
-   ```
-
-### Email Deliverability Tips
-
-- Use your own domain for better deliverability
-- Setup SPF, DKIM, and DMARC records
-- Avoid spam trigger words in email content
-- Use professional from address (not Gmail/Yahoo)
-
-## TMDB Movie Database
-
-### Fetch Movies from TMDB
-
-The app can automatically populate your database with movies from TMDB:
+Abrir en navegador:
 
 ```bash
-# Test connection first
-npm run fetch:movies:test
+http://localhost:3000
+```
 
-# Fetch movies (adjust pages in script if needed)
+---
+
+# 🎬 Páginas principales
+
+| Página | Ruta |
+|---|---|
+| Home | `/` |
+| Movies | `/movies` |
+| Search | `/search` |
+| Movie Details | `/movie/[id]` |
+| Watch | `/watch/[id]` |
+| Watchlist | `/watchlist` |
+| Auth | `/auth/signin` |
+
+---
+
+# 🛠️ Scripts disponibles
+
+| Script | Descripción |
+|---|---|
+| `npm run dev` | Servidor desarrollo |
+| `npm run build` | Build producción |
+| `npm run start` | Iniciar producción |
+| `npm run db:push` | Prisma DB Push |
+| `npm run db:studio` | Prisma Studio |
+| `npm run fetch:movies` | Descargar películas TMDB |
+
+---
+
+# 🎥 Integración TMDB
+
+## 📡 Funciones disponibles
+
+- Trending movies
+- Popular movies
+- Top rated
+- Now Playing
+- Upcoming movies
+
+---
+
+## ⚡ Fetch automático
+
+```bash
 npm run fetch:movies
 ```
 
-### Configuration
+---
 
-Edit `scripts/fetch-tmdb-movies.ts` to adjust:
+# 📧 Sistema de correos
 
-- Number of pages per category (default: 5 pages = ~100 movies per category)
-- Rate limiting (default: 250ms delay between requests)
-- Categories: Popular, Top Rated, Now Playing, Upcoming, Discover
+## ✉️ Gmail SMTP
 
-### Features
+- Recuperación de contraseña
+- Verificación
+- Emails automáticos
 
-- **Duplicate Prevention** - Skips movies already in database
-- **Rate Limiting** - Respects TMDB API limits
-- **Error Handling** - Retry mechanism for failed requests
-- **Progress Tracking** - Real-time progress display
+---
 
-## Database Schema
+## 🚀 SendGrid
 
-The app uses SQLite with Prisma ORM. Key models:
+- Producción recomendada
+- Mejor deliverability
+- Emails profesionales
 
-- **User** - User accounts and authentication
-- **Movie** - Movie data from TMDB
-- **Watchlist** - User's saved movies
-- **PasswordResetToken** - Password reset functionality
+---
 
-## Environment Variables
+# 🗄️ Database Schema
+
+## 📂 Modelos principales
+
+- 👤 User
+- 🎬 Movie
+- ❤️ Watchlist
+- 🔑 PasswordResetToken
+
+---
+
+# 📸 Vista previa
+
+<div align="center">
+
+<img width="1000" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop" />
+
+</div>
+
+---
+
+# 🧠 Objetivos del proyecto
+
+## 🎯 Aprender y practicar
+
+- Next.js App Router
+- TypeScript
+- Prisma ORM
+- Full Stack Development
+- APIs REST
+- Streaming UI
+- Arquitectura moderna web
+
+---
+
+# 🚧 Roadmap
+
+## 🔮 Próximas mejoras
+
+- 📱 Aplicación móvil
+- 🎥 Streaming real
+- 🤖 IA de recomendaciones
+- 🌍 Multi idioma
+- 👥 Sistema social
+- 📡 WebSockets
+- 🎬 Live streaming
+
+---
+
+# 🐛 Troubleshooting
+
+## ❌ Problemas con TMDB
+
+- Verificar API Key
+- Revisar límites de requests
+- Ejecutar fetch scripts
+
+---
+
+## ⚠️ Problemas de autenticación
+
+- Configurar NEXTAUTH_SECRET
+- Revisar variables `.env.local`
+
+---
+
+## 🗄️ Problemas con Prisma
 
 ```bash
-# Required
-TMDB_API_KEY="your-tmdb-api-key-here"
-TMDB_BASE_URL="https://api.themoviedb.org/3"
-DATABASE_URL="file:./dev.db"
-NEXTAUTH_URL="http://localhost:3000"
-NEXTAUTH_SECRET="your-secret-key-here"
-
-# Email (Optional)
-EMAIL_USER="your-gmail@gmail.com"
-EMAIL_PASS="your-app-password"
-SENDGRID_API_KEY="SG.your-api-key-here"
-SENDGRID_FROM_EMAIL="noreply@yourdomain.com"
+npx prisma db push
 ```
 
-## Troubleshooting
+---
 
-### Email Issues
+# 🤝 Contribuciones
 
-- **Not sending**: Check console logs, verify credentials
-- **Spam folder**: Setup domain authentication, use professional domain
-- **Rate limits**: Gmail: 500/day, SendGrid: 100/day (free tier)
+Las contribuciones son bienvenidas ❤️
 
-### TMDB Issues
+## Cómo contribuir
 
-- **API key invalid**: Verify key in TMDB dashboard
-- **Rate limited**: Script handles this automatically with delays
-- **Database errors**: Run `npx prisma db push`
+1. Fork del proyecto
 
-### General Issues
+```bash
+git checkout -b feature/new-feature
+```
 
-- **Build errors**: Check TypeScript errors, run `npm run build`
-- **Database connection**: Ensure `.env.local` has correct DATABASE_URL
-- **Authentication**: Verify NEXTAUTH_SECRET is set
+2. Commit de cambios
 
-## Production Deployment
+```bash
+git commit -m "✨ Nueva funcionalidad"
+```
 
-1. **Email Service**: Use SendGrid or AWS SES for reliable delivery
-2. **Database**: Consider PostgreSQL for production
-3. **Domain**: Setup proper domain with SSL
-4. **Environment**: Use proper environment variables
-5. **Monitoring**: Setup error tracking and analytics
+3. Push al repositorio
 
-## Notes
+```bash
+git push origin feature/new-feature
+```
 
-- Movie data is fetched from TMDB API with 1-hour caching
-- Video playback uses sample videos for demo purposes
-- Watchlist data is stored in local SQLite database
-- Images are served from TMDB CDN
-- Email templates are responsive and professional
-- Search prioritizes local database over TMDB API
+4. Crear Pull Request 🚀
 
-## License
+---
 
-This project is for educational purposes. Please respect TMDB's terms of service and use appropriate licensing for production use.
+# 👨‍💻 Autor
+
+<div align="center">
+
+## Screenly Developers
+
+Desarrolladores enfocados en experiencias multimedia modernas y plataformas OTT full-stack.
+
+</div>
+
+---
+
+# 🌟 Apoya el proyecto
+
+⭐ Dale una estrella  
+🍴 Haz fork  
+📢 Comparte el proyecto
+
+---
+
+# 📜 Licencia
+
+Proyecto desarrollado con fines educativos y de práctica full-stack utilizando TMDB API.
+
+---
+
+<div align="center">
+
+### 🎬 Screenly — experiencia streaming moderna impulsada por Next.js 🚀
+
+</div>
