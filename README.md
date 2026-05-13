@@ -151,7 +151,7 @@ El proyecto fue desarrollado para practicar:
 # 📂 Estructura del proyecto
 
 ```bash
-screenly/
+PlataformaStreamingNextjs/
 │
 ├── app/
 ├── components/
@@ -425,7 +425,7 @@ git push origin feature/new-feature
 
 <div align="center">
 
-## Screenly Developers
+## Isai Reyes Developer
 
 Desarrolladores enfocados en experiencias multimedia modernas y plataformas OTT full-stack.
 
